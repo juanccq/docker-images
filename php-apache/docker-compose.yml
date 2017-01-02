@@ -1,0 +1,11 @@
+php:
+  build: ./apache2
+  ports:
+    - "80:80"
+  volumes:
+    - ./apache2/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+    - ./www/:/var/sitios/www
+  environment:
+    - SET_CONTAINER_TIMEZONE=true
+    - CONTAINER_TIMEZONE=America/La_Paz
+    
